@@ -20,11 +20,12 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         response.setContentType("application/json");
 
-        response.getWriter().write("""
-                    {
-                      "error": "unauthorized",
-                      "message": "Authentication is required"
-                    }
-                """);
+        String body =
+                "{"
+                        + "\"error\":\"unauthorized\","
+                        + "\"message\":\"Authentication is required\""
+                        + "}";
+
+        response.getWriter().write(body);
     }
 }

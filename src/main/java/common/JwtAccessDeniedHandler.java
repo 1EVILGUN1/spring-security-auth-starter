@@ -20,11 +20,11 @@ public class JwtAccessDeniedHandler implements AccessDeniedHandler {
         response.setStatus(HttpServletResponse.SC_FORBIDDEN);
         response.setContentType("application/json");
 
-        response.getWriter().write("""
-                    {
-                      "error": "forbidden",
-                      "message": "Access is denied"
-                    }
-                """);
+        response.getWriter().write(
+                "{"
+                        + "\"error\":\"forbidden\","
+                        + "\"message\":\"Access is denied\""
+                        + "}"
+        );
     }
 }

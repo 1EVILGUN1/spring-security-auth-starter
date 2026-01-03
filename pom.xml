@@ -30,12 +30,6 @@
 
     <dependencies>
 
-        <!-- Core -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
         <!-- Security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -94,9 +88,4 @@
         </dependency>
 
     </dependencies>
-
-    <build>
-        <plugins>
-        </plugins>
-    </build>
 </project>
