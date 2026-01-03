@@ -1,0 +1,99 @@
+{
+  "groups": [
+    {
+      "name": "security.auth",
+      "type": "properties.SecurityProperties",
+      "sourceType": "properties.SecurityProperties"
+    },
+    {
+      "name": "security.auth.jwt",
+      "type": "properties.JwtProperties",
+      "sourceType": "properties.JwtProperties"
+    },
+    {
+      "name": "security.auth.oauth2",
+      "type": "properties.OAuth2Properties",
+      "sourceType": "properties.OAuth2Properties"
+    },
+    {
+      "name": "security.auth.username-password",
+      "type": "properties.UsernamePasswordProperties",
+      "sourceType": "properties.UsernamePasswordProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "security.auth.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Включить security starter целиком",
+      "sourceType": "properties.SecurityProperties"
+    },
+    {
+      "name": "security.auth.jwt.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Включить JWT-аутентификацию",
+      "sourceType": "properties.JwtProperties"
+    },
+    {
+      "name": "security.auth.jwt.issuer",
+      "type": "java.lang.String",
+      "description": "Issuer для проверки токена",
+      "sourceType": "properties.JwtProperties"
+    },
+    {
+      "name": "security.auth.jwt.public-key",
+      "type": "java.lang.String",
+      "description": "Public key (если RSA)",
+      "sourceType": "properties.JwtProperties"
+    },
+    {
+      "name": "security.auth.jwt.role-prefix",
+      "type": "java.lang.String",
+      "description": "Префикс для ролей",
+      "sourceType": "properties.JwtProperties"
+    },
+    {
+      "name": "security.auth.jwt.roles-claim",
+      "type": "java.lang.String",
+      "description": "Claim с ролями",
+      "sourceType": "properties.JwtProperties"
+    },
+    {
+      "name": "security.auth.jwt.secret",
+      "type": "java.lang.String",
+      "description": "Secret (если HMAC)",
+      "sourceType": "properties.JwtProperties"
+    },
+    {
+      "name": "security.auth.oauth2.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Включить OAuth2 Resource Server",
+      "sourceType": "properties.OAuth2Properties"
+    },
+    {
+      "name": "security.auth.oauth2.issuer-uri",
+      "type": "java.lang.String",
+      "description": "Issuer URI (OIDC) Пример: https:\/\/accounts.google.com",
+      "sourceType": "properties.OAuth2Properties"
+    },
+    {
+      "name": "security.auth.oauth2.jwk-set-uri",
+      "type": "java.lang.String",
+      "description": "JWK Set URI (если issuer не используется)",
+      "sourceType": "properties.OAuth2Properties"
+    },
+    {
+      "name": "security.auth.username-password.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Включить username\/password login",
+      "sourceType": "properties.UsernamePasswordProperties"
+    },
+    {
+      "name": "security.auth.username-password.login-path",
+      "type": "java.lang.String",
+      "description": "Endpoint логина",
+      "sourceType": "properties.UsernamePasswordProperties"
+    }
+  ],
+  "hints": []
+}
