@@ -1,4 +1,0 @@
-com.castom.security.autoconfigure.core.SecurityAutoConfiguration
-com.castom.security.autoconfigure.JwtAutoConfiguration
-com.castom.security.autoconfigure.UsernamePasswordAutoConfiguration
-com.castom.security.autoconfigure.OAuth2AutoConfiguration
