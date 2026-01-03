@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,6 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import properties.UsernamePasswordProperties;
 import usernamepassword.JsonUsernamePasswordAuthenticationFilter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AutoConfiguration
@@ -49,7 +51,9 @@ public class UsernamePasswordAutoConfiguration {
     AuthenticationManager usernamePasswordAuthenticationManager(
             DaoAuthenticationProvider provider
     ) {
-        return new ProviderManager(List.of(provider));
+        List<AuthenticationProvider> list = new ArrayList<>();
+        list.add(provider);
+        return new ProviderManager(list);
     }
 
     @Bean

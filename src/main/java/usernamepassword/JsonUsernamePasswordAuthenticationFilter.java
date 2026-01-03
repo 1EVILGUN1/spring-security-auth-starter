@@ -37,7 +37,7 @@ public class JsonUsernamePasswordAuthenticationFilter
         String username = body.get("usernamepassword");
         String password = body.get("password");
 
-        var authRequest =
+        UsernamePasswordAuthenticationToken authRequest =
                 new UsernamePasswordAuthenticationToken(username, password);
 
         return getAuthenticationManager().authenticate(authRequest);

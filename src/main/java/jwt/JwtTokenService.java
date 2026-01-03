@@ -11,6 +11,7 @@ import properties.JwtProperties;
 import javax.crypto.SecretKey;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class JwtTokenService {
 
@@ -40,11 +41,10 @@ public class JwtTokenService {
                 roles = Collections.emptyList();
             }
 
-            var authorities = roles.stream()
+            List<SimpleGrantedAuthority> authorities = roles.stream()
                     .map(r -> new SimpleGrantedAuthority(
                             properties.getRolePrefix() + r
-                    ))
-                    .toList();
+                    )).collect(Collectors.toList());
 
             UserPrincipal principal = new UserPrincipal(userId);
             return new JwtAuthenticationToken(principal, authorities);
